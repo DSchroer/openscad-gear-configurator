@@ -1,3 +1,5 @@
+build: configurator/lib
+
 run: configurator/lib
 	npx http-server configurator
 

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OpenSCAD Configurator</title>
+    <link rel="stylesheet" href="https://fonts.xz.style/serve/inter.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css"
+    />
+    <link rel="stylesheet" href="configurator.css" />
+  </head>
+  <body>
+    <h1>Gear Configurator</h1>
+    <form id="configurator">
+      <div>
+        <label for="pitch">Pitch:</label>
+        <input id="pitch" name="pitch" type="number" value="2" />
+      </div>
+
+      <div>
+        <label for="teeth"># Of Teeth:</label>
+        <input id="teeth" name="teeth" type="number" value="12" />
+      </div>
+
+      <div>
+        <label for="thickness">Thickness:</label>
+        <input id="thickness" name="thickness" type="number" value="3" />
+      </div>
+
+      <div>
+        <label for="bore-diameter">Bore Diameter:</label>
+        <input id="bore-diameter" name="bore-diameter" type="number" value="2" />
+      </div>
+
+      <button id="generate" type="submit">Generate STL</button>
+    </form>
+    <script src="configurator.js" type="module"></script>
+  </body>
+</html>

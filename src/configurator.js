@@ -1,11 +1,11 @@
-import OpenScad from "./lib/openscad.js";
-import { addMCAD } from "./lib/openscad.mcad.js";
+import OpenScad from "../lib/openscad.js";
+import { addMCAD } from "../lib/openscad.mcad.js";
 
 const form = document.getElementById("configurator");
 const generateBtn = document.getElementById("generate");
 
-const sourceRes = await fetch("./gear.scad");
-const source = await sourceRes.text();
+// const sourceRes = await fetch("./gear.scad");
+// const source = await sourceRes.text();
 
 form.onsubmit = async (e) => {
   e.preventDefault();

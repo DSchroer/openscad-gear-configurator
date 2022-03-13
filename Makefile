@@ -1,9 +1,12 @@
-build: configurator/lib
+build: configurator/configurator.js
 
-run: configurator/lib
+configurator/configurator.js: lib
+	npx rollup src/configurator.js --file $@ --format iife
+
+run: lib
 	npx http-server configurator
 
-configurator/lib: scripts/pull-openscad.sh
-	rm -rf configurator/lib
-	mkdir -p configurator/lib
-	cd configurator/lib && $(CURDIR)/$?
+lib: scripts/pull-openscad.sh
+	rm -rf lib
+	mkdir -p lib
+	cd lib && $(CURDIR)/$?

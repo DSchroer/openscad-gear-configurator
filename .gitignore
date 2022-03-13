@@ -1,1 +1,3 @@
-configurator/lib
+lib
+node_modules
+configurator/*.js

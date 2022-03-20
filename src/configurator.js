@@ -1,6 +1,7 @@
 const form = document.getElementById("configurator");
 const generateBtn = document.getElementById("generate");
 const cancelBtn = document.getElementById("cancel");
+const spinnerImg = document.getElementById("spinner");
 
 let worker;
 
@@ -11,6 +12,7 @@ cancelBtn.onclick = (e) => {
     worker.terminate();
   }
 
+  spinnerImg.hidden = true;
   generateBtn.disabled = false;
 }
 
@@ -21,10 +23,12 @@ form.onsubmit = async (e) => {
 
   worker.onmessage = function (e) {
     downloadFile(e.data, "gear.stl");
+    spinnerImg.hidden = true;
     generateBtn.disabled = false;
     worker.terminate();
   };
 
+  spinnerImg.hidden = false;
   generateBtn.disabled = true;
 
   const values = new FormData(form);

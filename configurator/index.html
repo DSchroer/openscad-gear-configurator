@@ -35,8 +35,12 @@
         <input id="bore-diameter" name="bore-diameter" type="number" value="2" />
       </div>
 
-      <button id="generate" type="submit">Generate STL</button>
-      <button id="cancel" type="button">Cancel</button>
+      <div class="buttons">
+        <button id="generate" type="submit">Generate STL</button>
+        <img id="spinner" src="./spinner.gif" width="25" height="25" hidden/>
+        <button id="cancel" type="button">Cancel</button>
+      </div>
+      
     </form>
     <script src="configurator.js" type="module"></script>
   </body>

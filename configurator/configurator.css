@@ -7,3 +7,13 @@ form div {
 form div input{
     flex: 1
 }
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.buttons img {
+    margin-bottom: 0;
+}
